@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="danii"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-05 03:40:50 "/>
+        <attribute name="created" value="ZGFuaWk7REVTS1RPUC1FOU44S1EzOzIwMjMtMDMtMDU7IjAzOjI2OjA5ICI7Mjc1Nw=="/>
+        <attribute name="edited" value="ZGFuaWk7REVTS1RPUC1FOU44S1EzOzIwMjMtMDMtMDU7IjAzOjQwOjUwICI7ODsyODY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x1, x2, x3, x4" type="Real" array="False" size=""/>
+            <assign variable="x1" expression="1"/>
+            <assign variable="x2" expression="2"/>
+            <assign variable="x3" expression="3"/>
+            <assign variable="x4" expression="4"/>
+            <comment text="&#1076;&#1086;&#1083;&#1078;&#1085;&#1086; &#1087;&#1086;&#1083;&#1091;&#1095;&#1080;&#1090;&#1100;&#1089;&#1103;: 2,5"/>
+            <output expression="(x1+x2+x3+x4)/4" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

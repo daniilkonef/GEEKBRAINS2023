@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="danii"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-05 06:40:21 "/>
+        <attribute name="created" value="ZGFuaWk7REVTS1RPUC1FOU44S1EzOzIwMjMtMDMtMDU7IjAzOjQ0OjU2ICI7Mjc1OQ=="/>
+        <attribute name="edited" value="ZGFuaWk7REVTS1RPUC1FOU44S1EzOzIwMjMtMDMtMDU7IjA2OjQwOjIxICI7NDsyODYx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number, index" type="Integer" array="False" size=""/>
+            <input variable="number"/>
+            <declare name="factorial" type="Integer" array="False" size=""/>
+            <assign variable="factorial" expression="1"/>
+            <for variable="index" start="1" end="number" direction="inc" step="1">
+                <assign variable="factorial" expression="factorial*index"/>
+            </for>
+            <output expression="factorial" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
