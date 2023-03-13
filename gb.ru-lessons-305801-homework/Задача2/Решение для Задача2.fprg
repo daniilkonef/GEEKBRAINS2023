@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="daniilkonef"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-14 12:39:36 "/>
+        <attribute name="created" value="ZGFuaWk7REVTS1RPUC1FOU44S1EzOzIwMjMtMDMtMTM7IjExOjQ2OjUzICI7Mjc1Ng=="/>
+        <attribute name="edited" value="ZGFuaWk7REVTS1RPUC1FOU44S1EzOzIwMjMtMDMtMTQ7IjEyOjM5OjM2ICI7MzA7MjkxOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1056;&#1077;&#1096;&#1077;&#1085;&#1080;&#1077; &#1079;&#1072;&#1076;&#1072;&#1095;&#1080; 2 &#1086;&#1090;&#1089;&#1102;&#1076;&#1072; https://gb.ru/lessons/305801/homework"/>
+            <comment text="&#1053;&#1077; &#1084;&#1086;&#1075;&#1091; &#1087;&#1086;&#1085;&#1103;&#1090;&#1100; &#1079;&#1072;&#1095;&#1077;&#1084; &#1042;&#1099;  &#1093;&#1086;&#1090;&#1080;&#1090;&#1077; &#1087;&#1088;&#1086;&#1074;&#1077;&#1088;&#1103;&#1090;&#1100; &#1072;&#1083;&#1075;&#1086;&#1088;&#1080;&#1090;&#1084; &#1087;&#1086; &#1089;&#1082;&#1088;&#1080;&#1085;&#1096;&#1086;&#1090;&#1072;&#1084; &#1080; &#1074;&#1086;&#1086;&#1073;&#1097;&#1077; &#1076;&#1072;&#1078;&#1077; &#1077;&#1089;&#1083;&#1080; &#1101;&#1090;&#1086; &#1074; &#1044;&#1048;&#1040;&#1043;&#1056;&#1040;&#1052;&#1057; &#1085;&#1072;&#1095;&#1077;&#1088;&#1095;&#1077;&#1085;&#1086; &#1074;&#1077;&#1082;&#1090;&#1086;&#1088;&#1085;&#1086; - &#1101;&#1090;&#1086; &#1078;&#1077; &#1085;&#1077;&#1078;&#1080;&#1074;&#1099;&#1077; &#1072;&#1083;&#1075;&#1086;&#1088;&#1080;&#1090;&#1084;&#1099;. &#1040; &#1103; &#1074;&#1072;&#1084; &#1087;&#1088;&#1077;&#1076;&#1083;&#1078;&#1080;&#1083; &#1078;&#1080;&#1074;&#1086;&#1081; &#1072;&#1083;&#1075;&#1086;&#1088;&#1080;&#1090;&#1084; &#1086;&#1090;&#1082;&#1088;&#1099;&#1090;&#1100;, &#1085;&#1072;&#1078;&#1072;&#1090;&#1100; play &#1080; &#1091;&#1074;&#1080;&#1076;&#1077;&#1090;&#1100; &#1095;&#1090;&#1086; &#1086;&#1085;&#1086; &#1074;&#1089;&#1077; &#1074;&#1077;&#1088;&#1085;&#1086; &#1088;&#1072;&#1073;&#1086;&#1090;&#1072;&#1077;&#1090; &#1079;&#1072; &#1089;&#1077;&#1082;&#1091;&#1085;&#1076;&#1091;, &#1085;&#1077;&#1091;&#1078;&#1077;&#1083;&#1080; &#1089;&#1086;&#1073;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1086;&#1077; &#1074;&#1088;&#1077;&#1084;&#1103; &#1074;&#1072;&#1084; &#1085;&#1077; &#1076;&#1086;&#1088;&#1086;&#1075;&#1086;. &#1048; &#1095;&#1077;&#1088;&#1090;&#1080;&#1090;&#1100; &#1090;&#1091;&#1090; &#1074; &#1076;&#1077;&#1089;&#1103;&#1090;&#1100; &#1088;&#1072;&#1079; &#1073;&#1099;&#1089;&#1090;&#1088;&#1077;&#1077; &#1095;&#1077;&#1084; &#1074; &#1044;&#1048;&#1040;&#1043;&#1056;&#1040;&#1052;&#1057;"/>
+            <declare name="numbers" type="Integer" array="True" size="8"/>
+            <assign variable="numbers[0]" expression="1"/>
+            <assign variable="numbers[1]" expression="8"/>
+            <assign variable="numbers[2]" expression="3"/>
+            <assign variable="numbers[3]" expression="8"/>
+            <assign variable="numbers[4]" expression="2"/>
+            <assign variable="numbers[5]" expression="6"/>
+            <assign variable="numbers[6]" expression="8"/>
+            <assign variable="numbers[7]" expression="8"/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <assign variable="index" expression="0"/>
+            <declare name="maximum" type="Integer" array="False" size=""/>
+            <assign variable="maximum" expression="numbers[index]"/>
+            <declare name="countmaximal" type="Integer" array="False" size=""/>
+            <assign variable="countmaximal" expression="0"/>
+            <declare name="numbersOfIndex" type="Integer" array="False" size=""/>
+            <while expression="index &lt; size(numbers)">
+                <assign variable="numbersOfIndex" expression="numbers[index]"/>
+                <if expression="numbers[index] &gt; maximum">
+                    <then>
+                        <assign variable="maximum" expression="numbers[index]"/>
+                        <assign variable="countmaximal" expression="1"/>
+                    </then>
+                    <else>
+                        <if expression="numbers[index] == maximum">
+                            <then>
+                                <assign variable="countmaximal" expression="countmaximal+1"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="index" expression="index+1"/>
+            </while>
+            <output expression="&quot;countmaximal= &quot; &amp; countmaximal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
