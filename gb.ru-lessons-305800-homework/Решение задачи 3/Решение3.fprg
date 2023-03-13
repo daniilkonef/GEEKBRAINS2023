@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="danii"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-06 11:15:11 "/>
+        <attribute name="created" value="ZGFuaWk7REVTS1RPUC1FOU44S1EzOzIwMjMtMDMtMDU7IjEwOjU3OjA5ICI7Mjc1OQ=="/>
+        <attribute name="edited" value="ZGFuaWk7REVTS1RPUC1FOU44S1EzOzIwMjMtMDMtMDY7IjExOjE1OjExICI7NTM7MjkxMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1059;&#1057;&#1051;&#1054;&#1042;&#1048;&#1045; &#1047;&#1040;&#1044;&#1040;&#1063;&#1048;:  &#1053;&#1072;&#1081;&#1090;&#1080; &#1089;&#1091;&#1084;&#1084;&#1091; &#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1086;&#1074; &#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1072;, &#1083;&#1077;&#1078;&#1072;&#1097;&#1080;&#1093; &#1084;&#1077;&#1078;&#1076;&#1091; &#1084;&#1072;&#1082;&#1089;&#1080;&#1084;&#1072;&#1083;&#1100;&#1085;&#1099;&#1084; &#1080; &#1084;&#1080;&#1085;&#1080;&#1084;&#1072;&#1083;&#1100;&#1085;&#1099;&#1084; &#1087;&#1086; &#1079;&#1085;&#1072;&#1095;&#1077;&#1085;&#1080;&#1102; &#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1072;&#1084;&#1080; (15) - &#1095;&#1090;&#1086; &#1079;&#1085;&#1072;&#1095;&#1080;&#1090; (15) &#1103; &#1085;&#1077; &#1087;&#1086;&#1085;&#1080;&#1084;&#1072;&#1102;. &#1048;&#1057;&#1058;&#1054;&#1063;&#1053;&#1048;&#1050; &#1047;&#1040;&#1044;&#1040;&#1063;&#1048;: https://gb.ru/lessons/305800/homework  &#1055;&#1056;&#1054;&#1041;&#1051;&#1045;&#1052;&#1040;: &#1074; &#1091;&#1089;&#1083;&#1086;&#1074;&#1080;&#1080; &#1085;&#1077; &#1089;&#1082;&#1072;&#1079;&#1072;&#1085;&#1086; &#1074;&#1082;&#1083;&#1102;&#1095;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086; &#1080;&#1083;&#1080; &#1085;&#1077;&#1090; &#1083;&#1077;&#1078;&#1072;&#1097;&#1080;&#1093; &#1084;&#1077;&#1078;&#1076;&#1091; &#1084;&#1072;&#1082;&#1089;&#1080;&#1084;&#1072;&#1083;&#1100;&#1085;&#1099;&#1084; &#1080; &#1084;&#1080;&#1085;&#1080;&#1084;&#1072;&#1083;&#1100;&#1085;&#1099;&#1084; &#1087;&#1086; &#1079;&#1085;&#1072;&#1095;&#1077;&#1085;&#1080;&#1102; &#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1072;&#1084;&#1080;, &#1090;&#1072;&#1082; &#1095;&#1090;&#1086; &#1103; &#1074;&#1099;&#1073;&#1088;&#1072;&#1083; &#1074;&#1072;&#1088;&#1080;&#1072;&#1085;&#1090; &#1089; &#1074;&#1082;&#1083;&#1102;&#1095;&#1077;&#1085;&#1080;&#1077;&#1084; &#1075;&#1088;&#1072;&#1085;&#1080;&#1094;."/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <assign variable="index" expression="0"/>
+            <declare name="size" type="Integer" array="False" size=""/>
+            <assign variable="size" expression="9"/>
+            <declare name="array1" type="Integer" array="True" size="size"/>
+            <comment text="&#1044;&#1072;&#1083;&#1100;&#1096;&#1077;: &#1079;&#1072;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1077; &#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1072; &#1089;&#1083;&#1091;&#1095;&#1072;&#1081;&#1085;&#1099;&#1084;&#1080; &#1095;&#1080;&#1089;&#1083;&#1072;&#1084;&#1080;;"/>
+            <for variable="index" start="0" end="size(array1)-1" direction="inc" step="1">
+                <assign variable="array1[index]" expression="random(size)"/>
+            </for>
+            <comment text="&#1044;&#1072;&#1083;&#1100;&#1096;&#1077;: &#1055;&#1086;&#1080;&#1089;&#1082; &#1084;&#1072;&#1082;&#1089;&#1080;&#1084;&#1072;&#1083;&#1100;&#1085;&#1086;&#1075;&#1086; &#1079;&#1085;&#1072;&#1095;&#1077;&#1085;&#1080;&#1103; &#1080; &#1077;&#1075;&#1086; &#1080;&#1085;&#1076;&#1077;&#1082;&#1089;&#1072;;"/>
+            <declare name="maxValue" type="Integer" array="False" size=""/>
+            <assign variable="maxValue" expression="array1[0]"/>
+            <declare name="indexOfMaxValue" type="Integer" array="False" size=""/>
+            <assign variable="indexOfMaxValue" expression="0"/>
+            <for variable="index" start="0" end="size(array1)-1" direction="inc" step="1">
+                <if expression="array1[index]&gt;maxValue">
+                    <then>
+                        <assign variable="maxValue" expression="array1[index]"/>
+                        <assign variable="indexOfMaxValue" expression="index"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;maxValue = &quot; &amp;  maxValue" newline="True"/>
+            <output expression="&quot;indexOfMaxValue = &quot; &amp; indexOfMaxValue" newline="True"/>
+            <comment text="&#1044;&#1072;&#1083;&#1100;&#1096;&#1077;: &#1055;&#1086;&#1080;&#1089;&#1082; &#1084;&#1080;&#1085;&#1080;&#1084;&#1072;&#1083;&#1100;&#1085;&#1086;&#1075;&#1086; &#1079;&#1085;&#1072;&#1095;&#1077;&#1085;&#1080;&#1103; &#1080; &#1077;&#1075;&#1086; &#1080;&#1085;&#1076;&#1077;&#1082;&#1089;&#1072;;"/>
+            <declare name="minValue" type="Integer" array="False" size=""/>
+            <assign variable="minValue" expression="array1[0]"/>
+            <declare name="indexOfMinValue" type="Integer" array="False" size=""/>
+            <assign variable="indexOfMinValue" expression="0"/>
+            <for variable="index" start="0" end="size(array1)-1" direction="inc" step="1">
+                <if expression="array1[index]&lt;minValue">
+                    <then>
+                        <assign variable="minValue" expression="array1[index]"/>
+                        <assign variable="indexOfMinValue" expression="index"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;minValue = &quot; &amp;  minValue" newline="True"/>
+            <output expression="&quot;indexOfMinValue = &quot; &amp; indexOfMinValue" newline="True"/>
+            <declare name="summa, temp" type="Integer" array="False" size=""/>
+            <assign variable="summa" expression="0"/>
+            <assign variable="temp" expression="0"/>
+            <if expression="indexOfMaxValue&gt;indexOfMinvalue">
+                <then>
+                    <for variable="index" start="indexOfMinValue" end="indexOfMaxValue" direction="inc" step="1">
+                        <assign variable="summa" expression="summa+array1[index]"/>
+                    </for>
+                    <output expression="&quot;summa right = &quot; &amp; summa" newline="True"/>
+                </then>
+                <else>
+                    <for variable="index" start="indexOfMinValue" end="indexOfMaxValue" direction="dec" step="1">
+                        <assign variable="summa" expression="summa+array1[index]"/>
+                    </for>
+                    <output expression="&quot;summa left = &quot; &amp; summa" newline="True"/>
+                </else>
+            </if>
+            <comment text="&#1043;&#1086;&#1090;&#1086;&#1074;&#1086;"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="danii"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-06 11:29:16 "/>
+        <attribute name="created" value="ZGFuaWk7REVTS1RPUC1FOU44S1EzOzIwMjMtMDMtMDU7IjEwOjU3OjA5ICI7Mjc1OQ=="/>
+        <attribute name="edited" value="ZGFuaWk7REVTS1RPUC1FOU44S1EzOzIwMjMtMDMtMDY7IjExOjI5OjE2ICI7NjQ7MjkyMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#1059;&#1057;&#1051;&#1054;&#1042;&#1048;&#1045; &#1047;&#1040;&#1044;&#1040;&#1063;&#1048;:  &#1053;&#1072;&#1081;&#1090;&#1080; &#1089;&#1088;&#1077;&#1076;&#1085;&#1077;&#1077; &#1072;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1086;&#1077; &#1089;&#1088;&#1077;&#1076;&#1080; &#1074;&#1089;&#1077;&#1093; &#1101;&#1083;&#1077;&#1084;&#1077;&#1085;&#1090;&#1086;&#1074; &#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1072;. (12) - &#1095;&#1090;&#1086; &#1079;&#1085;&#1072;&#1095;&#1080;&#1090; (12) &#1103; &#1085;&#1077; &#1087;&#1086;&#1085;&#1080;&#1084;&#1072;&#1102;. &#13;&#10;&#13;&#10;&#1048;&#1057;&#1058;&#1054;&#1063;&#1053;&#1048;&#1050; &#1047;&#1040;&#1044;&#1040;&#1063;&#1048;: https://gb.ru/lessons/305800/homework  "/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <assign variable="index" expression="0"/>
+            <declare name="size" type="Integer" array="False" size=""/>
+            <assign variable="size" expression="3"/>
+            <declare name="array1" type="Integer" array="True" size="size"/>
+            <comment text="&#1044;&#1072;&#1083;&#1100;&#1096;&#1077;: &#1079;&#1072;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1077; &#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1072; &#1089;&#1083;&#1091;&#1095;&#1072;&#1081;&#1085;&#1099;&#1084;&#1080; &#1095;&#1080;&#1089;&#1083;&#1072;&#1084;&#1080;;"/>
+            <for variable="index" start="0" end="size(array1)-1" direction="inc" step="1">
+                <assign variable="array1[index]" expression="random(size)"/>
+            </for>
+            <declare name="summa" type="Real" array="False" size=""/>
+            <assign variable="summa" expression="0"/>
+            <declare name="avg" type="Real" array="False" size=""/>
+            <assign variable="avg" expression="0"/>
+            <comment text="&#1082;&#1072;&#1082; &#1075;&#1086;&#1074;&#1086;&#1088;&#1080;&#1090; &#1085;&#1072;&#1088;&#1086;&#1076; &#1074;&#1086;&#1090; &#1090;&#1091;&#1090; https://yandex.ru/q/question/uchityvaetsia_li_0_v_podschete_srednego_85b98027/   &#1085;&#1091;&#1083;&#1080; &#1074; &#1084;&#1072;&#1089;&#1089;&#1080;&#1074;&#1077; &#1085;&#1077;&#1085;&#1072;&#1076;&#1086; &#1074;&#1099;&#1073;&#1088;&#1072;&#1089;&#1099;&#1074;&#1072;&#1090;&#1100; &#1087;&#1088;&#1080; &#1087;&#1086;&#1076;&#1089;&#1095;&#1077;&#1090;&#1077; &#1089;&#1088;&#1077;&#1076;&#1085;&#1077;&#1075;&#1086; &#1072;&#1088;&#1080;&#1092;&#1084;&#1077;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1086;&#1075;&#1086; &#1079;&#1085;&#1072;&#1095;&#1077;&#1085;&#1080;&#1103;, &#1103; &#1089; &#1085;&#1080;&#1084;&#1080; &#1089;&#1086;&#1075;&#1083;&#1072;&#1089;&#1077;&#1085;, &#1080; &#1103; &#1080;&#1093; &#1086;&#1089;&#1090;&#1072;&#1074;&#1080;&#1083;. "/>
+            <for variable="index" start="0" end="size(array1)-1" direction="inc" step="1">
+                <assign variable="summa" expression="summa+array1[index]"/>
+                <assign variable="avg" expression="summa/size(array1)"/>
+            </for>
+            <output expression="&quot;&#1057;&#1088;&#1077;&#1076;&#1085;&#1077;&#1077; &#1088;&#1072;&#1074;&#1085;&#1086;: &quot; &amp;avg" newline="True"/>
+            <comment text="&#1043;&#1086;&#1090;&#1086;&#1074;&#1086;"/>
+        </body>
+    </function>
+</flowgorithm>
