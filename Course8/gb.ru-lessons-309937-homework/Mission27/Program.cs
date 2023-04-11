@@ -18,6 +18,30 @@ namespace Mission27
     {
         static void Main(string[] args)
         {
+            while (true)
+            {
+
+                Int32 A = 0;
+                Int32 B = 0;
+                
+
+                Console.Write("Введите число A: "); // вывожу приглашение пользователю 
+                A = Convert.ToInt32(Console.ReadLine()); // читаю текстовый ввод пользователя и преобразовываю его в целое число 
+
+
+                while( (A%10) > 0 || (A > 0) )
+                {
+
+                    B = B + A % 10;
+                    A = A / 10;
+                    
+                }
+
+                Console.WriteLine($"Сумма цифр в числе равна {B}");
+                Console.WriteLine();
+                
+
+            }
         }
     }
 }
