@@ -1,3 +1,6 @@
 http://www.flowgorithm.org/
 https://diagrams.net/
 https://semver.org/lang/ru/
+
+https://learn.microsoft.com/ru-ru/dotnet/csharp/fundamentals/coding-style/identifier-names
+https://learn.microsoft.com/ru-ru/dotnet/csharp/fundamentals/coding-style/coding-conventions
