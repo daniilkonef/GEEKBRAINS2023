@@ -27,27 +27,27 @@ namespace Mission50
 
             
             Random Generator = new Random();
-            double[,] numbers = new double[3, 4];
+            double[,] arrayOfNumbers = new double[3, 4];
 
-            int countOfRows = numbers.GetLength(0);
-            int countOfColumns = numbers.GetLength(1);
+            int countOfRows = arrayOfNumbers.GetLength(0);
+            int countOfColumns = arrayOfNumbers.GetLength(1);
 
             for (int currentColumn = 0; currentColumn < countOfColumns; currentColumn++)
             {
                 for (int currentRow = 0; currentRow < countOfRows; currentRow++)
                 {
-                    numbers[currentRow, currentColumn] = Math.Round(Generator.NextDouble() * 10, 2);
+                    arrayOfNumbers[currentRow, currentColumn] = Math.Round(Generator.NextDouble() * 10, 2);
                 }
             }
 
 
-            //foreach (double value in numbers) { Console.WriteLine($"Число {value} находится в координате массива [{}]"); }
+            //foreach (double value in arrayOfNumbers) { Console.WriteLine($"Число {value} находится в координате массива [{}]"); }
             
             for (int currentColumn = 0; currentColumn < countOfColumns; currentColumn++)
             {
                 for (int currentRow = 0; currentRow < countOfRows; currentRow++)
                 {
-                    double value = numbers[currentRow, currentColumn];
+                    double value = arrayOfNumbers[currentRow, currentColumn];
                     Console.WriteLine($"Число {value} находится в координате массива [{currentRow},{currentColumn}]");
                     
                 }
@@ -64,13 +64,26 @@ namespace Mission50
             // иначе вывести значение запрошенного элемента
 
             Console.Write("Сообщите номер строки: ");
-            int numberOfRow = Int32.Parse(Console.ReadLine());
+            int requestedNumberOfRow = Int32.Parse(Console.ReadLine());
 
-            Console.Write("Сообщите номер строки: ");
-            int numberOfColumn = Int32.Parse(Console.ReadLine());
+            Console.Write("Сообщите номер столбца: ");
+            int requestedNumberOfColumn = Int32.Parse(Console.ReadLine());
+
+            int axisX = 0;
+            int axisY = 1;
+            countOfRows = arrayOfNumbers.GetLength(axisX);
+            countOfColumns = arrayOfNumbers.GetLength(axisY);
+
+            if ( (requestedNumberOfRow <= countOfRows) && (requestedNumberOfColumn <= countOfColumns) )
+            {
+                double value = arrayOfNumbers[requestedNumberOfRow, requestedNumberOfColumn];
+                Console.WriteLine($"В запрошенной координате массива [{requestedNumberOfRow},{requestedNumberOfColumn}] находится число {value} ");
+            }
+            else Console.WriteLine($"В запрошенной координате массива [{requestedNumberOfRow},{requestedNumberOfColumn}] число отсутствует ");
 
 
-            
+
+
         }
     }
 }
