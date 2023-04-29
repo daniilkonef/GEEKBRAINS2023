@@ -1,6 +1,17 @@
 http://www.flowgorithm.org/
 https://diagrams.net/
 https://semver.org/lang/ru/
+https://vimeo.com/showcase/5616060
+https://habr.com/ru/companies/vertdider/articles/403823/
+
+
+
 
 https://learn.microsoft.com/ru-ru/dotnet/csharp/fundamentals/coding-style/identifier-names
 https://learn.microsoft.com/ru-ru/dotnet/csharp/fundamentals/coding-style/coding-conventions
+
+
+Базы данных
+«Введение в системы баз данных» К. Дж. Дейт
+📚 «MySQL по максимуму» Бэрон Шварц, Вадим Ткаченко, Петр Зайцев
+📚 «Семь баз данных за семь недель» Джим Р. Уилсон, Эрик Редмонд
