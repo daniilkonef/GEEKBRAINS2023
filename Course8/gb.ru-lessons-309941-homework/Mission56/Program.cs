@@ -20,7 +20,7 @@ namespace Mission56
 {
     internal class Program
     {
-        static void Main() // написано мной
+        static void Main() // 
         {
             int[,] array4x4 = new int[4, 4] { // написано мной
                                                  {1,4,7,2 }, // 14 // написано мной
