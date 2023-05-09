@@ -3,6 +3,8 @@ https://diagrams.net/
 https://semver.org/lang/ru/
 https://vimeo.com/showcase/5616060
 https://habr.com/ru/companies/vertdider/articles/403823/
+https://geogebra.org/calculator
+https://www.desmos.com/calculator?lang=ru
 
 
 
@@ -15,3 +17,8 @@ https://learn.microsoft.com/ru-ru/dotnet/csharp/fundamentals/coding-style/coding
 
 Искуственные интеллекты!!!
 https://sms-activate.org/ru
+
+
+Статьи
+https://t.me/iksergeyru/121
+https://github.com/iksergey/SortingTypes/tree/main/dotnet
