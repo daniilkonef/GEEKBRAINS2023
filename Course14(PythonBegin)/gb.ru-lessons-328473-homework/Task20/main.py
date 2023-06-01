@@ -23,7 +23,7 @@
 #     ноутбук
 #     12
 
-english_alphabet = dict({
+english_dictionay = dict({
     "A": 1,
     "E": 1,
     "I": 1,
@@ -51,13 +51,74 @@ english_alphabet = dict({
     "Q": 10,
     "Z": 10})
 
+
+
+#   А русские буквы оцениваются так:
+#   А, В, Е, И, Н, О, Р, С, Т – 1 очко;
+#   Д, К, Л, М, П, У – 2 очка;
+#   Б, Г, Ё, Ь, Я – 3 очка;
+#   Й, Ы – 4 очка;
+#   Ж, З, Х, Ц, Ч – 5 очков;
+#   Ш, Э, Ю – 8 очков;
+#   Ф, Щ, Ъ – 10 очков.
+
+rusish_dictionary = dict({
+    "А": 1,
+    "В": 1,
+    "Е": 1,
+    "И": 1,
+    "Н": 1,
+    "О": 1,
+    "Р": 1,
+    "С": 1,
+    "Т": 1,
+    "Д": 2,
+    "К": 2,
+    "Л": 2,
+    "М": 2,
+    "П": 2,
+    "У": 2,
+    "Б": 3,
+    "Г": 3,
+    "Ё": 3,
+    "Ь": 3,
+    "Я": 3,
+    "Й": 4,
+    "Ы": 4,
+    "Ж": 5,
+    "З": 5,
+    "Х": 5,
+    "Ц": 5,
+    "Ч": 5,
+    "Ш": 8,
+    "Э": 8,
+    "Ю": 8,
+    "Ф": 10,
+    "Щ": 10,
+    "Ъ": 10})
+
 one_word: str = input("Введите одно слово: ")
 # print(english_alphabet)
 # print(english_alphabet.keys())
 # print(english_alphabet.values())
 
-summa = 0
-for one_char in one_word.upper():
-    print(one_char+f" = {english_alphabet[one_char]}")
-    summa = summa + english_alphabet[one_char]
-print(summa)
+english_alphabet = list(english_dictionay.keys())
+# print(english_alphabet)
+
+if one_word[0].upper() in english_alphabet:
+    summa = 0
+    for one_char in one_word.upper():
+        print(one_char+f" = {english_dictionay[one_char]}")
+        summa = summa + english_dictionay[one_char]
+    print(summa)
+
+
+rusish_alphabet = list(rusish_dictionary.keys())
+# print(rusish_alphabet)
+
+if one_word[0].upper() in rusish_alphabet:
+    summa = 0
+    for one_char in one_word.upper():
+        print(one_char+f" = {rusish_dictionary[one_char]}")
+        summa = summa + rusish_dictionary[one_char]
+    print(summa)
