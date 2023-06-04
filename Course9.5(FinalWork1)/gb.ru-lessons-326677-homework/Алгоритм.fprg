@@ -4,12 +4,41 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="DANIILKONEF"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2023-06-04 11:50:31 "/>
+        <attribute name="saved" value="2023-06-04 02:24:14 "/>
         <attribute name="created" value="REFOSUlMS09ORUY7REVTS1RPUC0wS1BMSjlLOzIwMjMtMDYtMDQ7IjExOjQ5OjU1ICI7MzA2OQ=="/>
-        <attribute name="edited" value="REFOSUlMS09ORUY7REVTS1RPUC0wS1BMSjlLOzIwMjMtMDYtMDQ7IjExOjUwOjMxICI7MTszMTYz"/>
+        <attribute name="edited" value="REFOSUlMS09ORUY7REVTS1RPUC0wS1BMSjlLOzIwMjMtMDYtMDQ7IjAyOjI0OjE0ICI7MTE7MzIxNA=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
-        <body/>
+        <body>
+            <declare name="array1" type="String" array="True" size="3"/>
+            <assign variable="array1[0]" expression="&quot;&#1089;&#1083;&#1086;&#1074;&#1086;1&quot;"/>
+            <assign variable="array1[0]" expression="&quot;&#1089;&#1083;&#1086;&#1074;&#1086;2&quot;"/>
+            <assign variable="array1[0]" expression="&quot;&#1089;&#1083;&#1086;&#1074;&#1086;3&quot;"/>
+            <declare name="array2" type="String" array="True" size="3"/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <declare name="oneString" type="String" array="False" size=""/>
+            <output expression="array1" newline="True"/>
+            <call expression="print(array1)"/>
+            <declare name="startIndex" type="Integer" array="False" size=""/>
+            <assign variable="startIndex" expression="0"/>
+            <declare name="endIndex" type="Integer" array="False" size=""/>
+            <assign variable="endIndex" expression="3"/>
+            <for variable="index" start="0" end="Size(array1)" direction="inc" step="1">
+                <assign variable="oneString" expression="GetCut(startIndex,endIndex,array1[index])"/>
+                <call expression="AppendTo(array2,oneSrting)"/>
+            </for>
+            <call expression="print(array2)"/>
+        </body>
+    </function>
+    <function name="GetCut" type="String" variable="mystring">
+        <parameters>
+            <parameter name="indexFrom" type="Integer" array="False"/>
+            <parameter name="indexTo" type="Integer" array="False"/>
+            <parameter name="str" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="str1" type="String" array="False" size=""/>
+        </body>
     </function>
 </flowgorithm>
