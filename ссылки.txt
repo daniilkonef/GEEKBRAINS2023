@@ -5,8 +5,9 @@ https://vimeo.com/showcase/5616060
 https://habr.com/ru/companies/vertdider/articles/403823/
 https://geogebra.org/calculator
 https://www.desmos.com/calculator?lang=ru
-
-
+http://boolr.me Download BOOLR: A digital logic simulator https://github.com/GGBRW/BOOLR
+https://beget.com/ru/hosting/free
+https://www.thatsoftwaredude.com/content/6417/how-to-code-blackjack-using-javascript
 
 
 https://learn.microsoft.com/ru-ru/dotnet/csharp/fundamentals/coding-style/identifier-names
