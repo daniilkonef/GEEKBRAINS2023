@@ -37,21 +37,32 @@ def delete_existing_contact_from(file_database):
     with (open(file_database, 'r', encoding="utf-8")) as db:
         for line in db:
             memory.append(line.strip())
-    memory.pop(id_number - 1)
+    print(f"Был удален контакт: {memory.pop(id_number - 1)}")
+    # print(memory)
+
+    f = open(file_database, 'w+')
+    f.seek(0)
+    f.close()
 
     for index in range(len(memory)):
         one_record = memory[index].split(";")
-        id_number = (int(one_record[0]))
+        id_number = int(index) + 1
         last_name = (str(one_record[1]))
         first_name = (str(one_record[2]))
         patronymic = (str(one_record[3]))
         phone_num = (str(one_record[4]))
+        splitter = str(";")
+        new_record = str(id_number) + splitter + first_name.strip() + splitter + last_name.strip() + splitter + patronymic.strip() + splitter + phone_num.strip()
+        print(new_record)
 
-    with open(file_database, "w+", encoding="utf-8") as handle:
-        for index in range(len(memory)):
-            one_record = memory[index]
-            # print(one_record)
-            handle.write(one_record + "\n")
+        with open(file_database, "a", encoding="utf-8") as handle:
+            handle.write(new_record + "\n")
+
+    # with open(file_database, "w+", encoding="utf-8") as handle:
+    #     for index in range(len(memory)):
+    #         one_record = memory[index]
+    #         # print(one_record)
+    #         handle.write(one_record + "\n")
 
 
 # delete_existing_contact_from(database)

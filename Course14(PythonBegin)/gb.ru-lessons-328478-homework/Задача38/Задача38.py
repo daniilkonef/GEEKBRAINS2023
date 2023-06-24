@@ -41,8 +41,7 @@ def add_new_contact():
     patronymic = input("Введите Отчество: ") or " - "
     phone_number = input("Введите номер телефона: ") or " - "
     splitter = str(";")
-    new_record = str(
-        id_number) + splitter + firstname.strip() + splitter + last_name.strip() + splitter + patronymic.strip() + splitter + phone_number.strip()
+    new_record = str(id_number) + splitter + firstname.strip() + splitter + last_name.strip() + splitter + patronymic.strip() + splitter + phone_number.strip()
     with open(file_database, "a", encoding="utf-8") as db:
         db.write(new_record + "\n")
 
