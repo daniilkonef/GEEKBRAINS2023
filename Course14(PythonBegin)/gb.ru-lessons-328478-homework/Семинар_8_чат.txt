@@ -1,0 +1,149 @@
+Про дебаг:
+Спрашивал тоже как-то про дебагер в VS code. Мне видео скинули. Может пригодится кому-то: https://drive.google.com/file/d/1GvfMXhGlFNQ7z-L98jHWZEXz0Jp1nLua/view?usp=sharing
+https://pythontutor.com/visualize.html#mode=edit
+
+======================
+
+Разбор домашней работы:
+
+=======================
+#34
+def count_vowels(text: str) -> int:
+    vowels = "аеёиоуыэюя"
+    count = 0
+    for char in text.lower():
+        if char in vowels:
+            count += 1
+    return count
+
+
+result = list(map(lambda s: count_vowels(s), input('Введите фразу: ').split()))
+print(result)
+if len(set(result)) == 1:
+    print('Парам пам-пам')
+else:
+    print('Пам парам')
+
+#36
+def print_operation_table(operation, num_rows=6, num_columns=6) -> None:
+    for i in range(1, num_columns + 1):
+        for j in range(1, num_rows + 1):
+            print(operation(i, j), end='\t')
+        print()
+
+
+print_operation_table(lambda x, y: x * y, num_rows=8, num_columns=6)
+
+============================
+
+Работа с файлами
+
+============================
+with open("../../file.txt", "r", encoding="utf8") as f:
+    data = f.readlines()
+    data = list(map(str.strip, data))
+    print(data)
+
+sp = ["567\n", "888"]
+with open("../../file.txt", "a", encoding="utf8") as f:
+    f.writelines(sp)
+
+sp = ["567\n", "888"]
+with open("../../file.txt", "w", encoding="utf8") as f:
+    f.writelines(sp)
+
+=============================
+
+Решение задачи семинара
+
+==============================
+file_path = "file.txt"
+
+
+def show_all_records():
+    with (open(file_path, 'r', encoding="utf-8")) as _data:
+        for line in _data:
+            phonebook_data = line.replace(";", " ")
+            print(phonebook_data, end="")
+
+
+def search_record():
+    pass
+
+
+def add_contact(new_contact_fio, new_contact_number):
+
+    with open("file.txt", "a", encoding="utf-8") as f:
+        f.write("\n")
+        f.write(new_contact_fio.replace(" ",";"))
+        f.write(';')
+        f.write(new_contact_number)
+
+
+def main():
+    print("Выберите действие: 1 - Показать справочник,"
+          "2 - найти контакт,"
+          "3 - добавить контакт")
+    select = int(input())
+    if select == 1:
+        show_all_records()
+    elif select == 2:
+        # ...
+        search_record()
+    elif select == 3:
+        fio = input("Введите ФИО через пробел: ")
+        number = input("Введите Номер: ")
+        add_contact(fio, number)
+
+main()
+===========================================
+def read_data(_data):
+    data = []
+    with (open(_data, 'r', encoding="utf-8")) as _data:
+        for line in _data:
+            data.append(line.strip())
+    
+    return data
+
+phonebook_data = read_data(data_file)
+
+print(phonebook_data)
+=============================================
+def add_contact():
+    new_contact_fio = input("Введите ФИО: ")
+    new_contact_number = input("Введите Номер: ")
+    with open("file.txt","a",encoding="utf-8") as f:
+        f.write("\n")
+        f.write(new_contact_fio.replace(" ",";"))
+        f.write(';')
+        f.write(new_contact_number)
+=============================================
+def save_contact(_data, _contact):
+    with (open(_data, 'a', encoding="utf-8")) as _data:
+        _data.write('\n' + _contact)
+        
+def add_contact(_data):  
+    new_contact_fio = input("Введите ФИО: ").replace(' ', ';')
+    new_contact_number = input("Введите Номер: ")
+    save_contact(data_file, new_contact_fio + ';' + new_contact_number)
+=============================================
+def show_all_records():
+    with open(file_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            print(*line.strip().split(';'))
+
+
+def search_record(num_col, val):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            lst = line.strip().split(';')
+            if lst[num_col - 1].lower() == val.lower():
+                print(*lst)
+                return
+    print(f'{val} не нашел')
+
+
+def add_contact(lst):
+    with open(file_path, 'a', encoding='utf-8') as f:
+        print(';'.join(lst),file=f)
+===================================================

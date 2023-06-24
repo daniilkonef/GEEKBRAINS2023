@@ -1,3 +1,4 @@
+https://www.epochconverter.com/hex
 http://www.flowgorithm.org/
 https://diagrams.net/
 https://semver.org/lang/ru/
@@ -8,6 +9,7 @@ https://www.desmos.com/calculator?lang=ru
 http://boolr.me Download BOOLR: A digital logic simulator https://github.com/GGBRW/BOOLR
 https://beget.com/ru/hosting/free
 https://www.thatsoftwaredude.com/content/6417/how-to-code-blackjack-using-javascript
+https://pythontutor.com/visualize.html#mode=edit
 
 
 https://learn.microsoft.com/ru-ru/dotnet/csharp/fundamentals/coding-style/identifier-names
