@@ -1,3 +1,5 @@
+from core import find_record_in
+
 database: str = "database.txt"
 
 
@@ -42,7 +44,8 @@ def add_new_contact():
     patronymic = input("Введите Отчество: ")
     phone_number = input("Введите номер телефона: ")
     splitter = str(";")
-    new_record = str(id_number) + splitter + firstname.strip() + splitter + last_name.strip() + splitter + patronymic.strip() + splitter + phone_number.strip()
+    new_record = str(
+        id_number) + splitter + firstname.strip() + splitter + last_name.strip() + splitter + patronymic.strip() + splitter + phone_number.strip()
     with open(database, "a", encoding="utf-8") as db:
         db.write(new_record + "\n")
 
@@ -69,21 +72,23 @@ def add_new_contact():
 
 
 def main():
-    print(get_virtual_database())
+    # print(get_virtual_database())
 
     print("ТЕЛЕФОННЫЙ СПРАВОЧНИК")
-    print("Выберите действие: \n"           
-          "1 - Показать все контакты; \n"           
-          "2 - Найти контакт; \n"          
-          "3 - Добавить контакт: \n"          
-          "введите цифру и нажмите Enter: ")
+    print("Выберите действие: \n"
+          "1 - Показать все контакты; \n"
+          "2 - Найти контакт; \n"
+          "3 - Добавить контакт: \n"
+          "Введите цифру и нажмите Enter: ")
 
-    user_selected = int(input())
-    if user_selected == 1:
+    user_selected_is = int(input())
+    if user_selected_is == 1:
         show_all_contacts()
-    if user_selected == 2:
-        search_record()
-    if user_selected == 3:
+
+    if user_selected_is == 2:
+        find_record_in(get_virtual_database(), str(input("Введите что ищем: ")))
+
+    if user_selected_is == 3:
         add_new_contact()
 
 
