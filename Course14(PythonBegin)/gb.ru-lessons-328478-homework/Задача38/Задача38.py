@@ -11,8 +11,6 @@ def show_all_contacts():
             data = line.replace(";", " ")
             memory.append(line.strip())
             print(data, end="")
-    # print()
-    # print(len(memory))
 
 
 def get_size_of_database():
@@ -41,30 +39,10 @@ def add_new_contact():
     patronymic = input("Введите Отчество: ") or " - "
     phone_number = input("Введите номер телефона: ") or " - "
     splitter = str(";")
-    new_record = str(id_number) + splitter + firstname.strip() + splitter + last_name.strip() + splitter + patronymic.strip() + splitter + phone_number.strip()
+    new_record = str(
+        id_number) + splitter + firstname.strip() + splitter + last_name.strip() + splitter + patronymic.strip() + splitter + phone_number.strip()
     with open(file_database, "a", encoding="utf-8") as db:
         db.write(new_record + "\n")
-
-
-# def show_all_records():
-#     with open(database, 'r', encoding='utf-8') as f:
-#         for line in f:
-#             print(*line.strip().split(';'))
-
-
-# def search_record(num_col, val):
-#     with open(file_path, 'r', encoding='utf-8') as f:
-#         for line in f:
-#             lst = line.strip().split(';')
-#             if lst[num_col - 1].lower() == val.lower():
-#                 print(*lst)
-#                 return
-#     print(f'{val} не нашел')
-
-
-# def add_contact(lst):
-#     with open(file_path, 'a', encoding='utf-8') as f:
-#         print(';'.join(lst), file=f)
 
 
 def main():
