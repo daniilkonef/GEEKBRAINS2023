@@ -58,11 +58,31 @@ def delete_existing_contact_from(file_database):
         with open(file_database, "a", encoding="utf-8") as handle:
             handle.write(new_record + "\n")
 
-    # with open(file_database, "w+", encoding="utf-8") as handle:
-    #     for index in range(len(memory)):
-    #         one_record = memory[index]
-    #         # print(one_record)
-    #         handle.write(one_record + "\n")
 
+def change_existing_contact_from(file_database):
+    id_number = int(input("Введите ID номер записи для ее изменения: "))
+    memory = list()
+    with (open(file_database, 'r', encoding="utf-8")) as db:
+        for line in db:
+            memory.append(line.strip())
+    # print(memory)
 
-# delete_existing_contact_from(database)
+    f = open(file_database, 'w+')
+    f.seek(0)
+    f.close()
+
+    firstname = input("Введите новое имя: ") or " - "
+    last_name = input("Введите новую фамилию: ") or " - "
+    patronymic = input("Введите новое отчество: ") or " - "
+    phone_number = input("Введите новый номер телефона: ") or " - "
+    splitter = str(";")
+    new_record = str(id_number) + splitter + firstname.strip() + splitter + last_name.strip() + splitter + patronymic.strip() + splitter + phone_number.strip()
+    memory[id_number - 1] = new_record
+
+    # print(memory)
+
+    with open(file_database, "a", encoding="utf-8") as db:
+        for my_str in memory:
+            print(my_str)
+            db.write(my_str + "\n")
+

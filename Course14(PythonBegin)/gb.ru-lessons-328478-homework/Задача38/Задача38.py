@@ -1,5 +1,6 @@
 from core import find_record_in
 from core import delete_existing_contact_from
+from core import change_existing_contact_from
 
 file_database: str = "database.txt"
 
@@ -54,6 +55,7 @@ def main():
           "2 - Найти контакт; \n"
           "3 - Добавить контакт: \n"
           "4 - Удалить контакт: \n"
+          "5 - Изменить контакт: \n"
           "Введите цифру и нажмите Enter: ")
 
     user_selected_is = int(input())
@@ -71,5 +73,7 @@ def main():
     if user_selected_is == 4:
         delete_existing_contact_from(file_database)
 
+    if user_selected_is == 5:
+        change_existing_contact_from(file_database)
 
 main()
