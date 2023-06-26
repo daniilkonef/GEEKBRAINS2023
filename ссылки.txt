@@ -12,6 +12,9 @@ https://www.thatsoftwaredude.com/content/6417/how-to-code-blackjack-using-javasc
 https://pythontutor.com/visualize.html#mode=edit
 
 
+https://www.w3schools.com/xml/xml_validator.asp
+
+
 https://learn.microsoft.com/ru-ru/dotnet/csharp/fundamentals/coding-style/identifier-names
 https://learn.microsoft.com/ru-ru/dotnet/csharp/fundamentals/coding-style/coding-conventions
 

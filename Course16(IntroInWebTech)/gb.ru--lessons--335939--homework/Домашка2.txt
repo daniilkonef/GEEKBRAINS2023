@@ -1,0 +1,38 @@
+Задача №2: проверить JSON на Well formed:
+https://gb.ru/lessons/335939/homework
+
+{
+        "surname": "Иванов"
+        "name": "Иван"
+        "patronymic": "Иванович"
+        "birthdate": "01.01.1990"
+        "birthplace": ""Москва"
+        "phone": "8 926 766 48 48"
+}
+
+это плохой JSON, так вот далее привожу два правильных варианта:
+Вариант1
+{
+	"req": [{
+		"surname": "Иванов",
+		"name": "Иван",
+		"patronymic": "Иванович",
+		"birthdate": "01.01.1990",
+		"birthplace": "Москва",
+		"phone": "8 926 766 48 48"
+	}]
+}
+
+Вариант2
+{
+	"req": {
+		"surname": "Иванов",
+		"name": "Иван",
+		"patronymic": "Иванович",
+		"birthdate": "01.01.1990",
+		"birthplace": "Москва",
+		"phone": "8 926 766 48 48"
+	}
+}
+
+проверено тут https://jsonformatter.org/xml-formatter и тут https://jsonformatter.org/json-parser
