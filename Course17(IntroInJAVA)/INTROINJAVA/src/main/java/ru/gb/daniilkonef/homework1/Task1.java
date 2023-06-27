@@ -1,3 +1,6 @@
+// https://gb.ru/lessons/340466/homework
+// 1) Вычислить n-ое треугольного число (сумма чисел от 1 до n), n! (произведение чисел от 1 до n)
+
 package ru.gb.daniilkonef.homework1;
 
 public class Task1 {
