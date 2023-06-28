@@ -8,11 +8,14 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Utils.clearConsole();
+        while (true) {
+            Utils.clearConsole();
 //        Task1.run();
 //        Task2.run();
 
-        Task3.run();
+            Task3.run();
+        }
+
 
     }
 }

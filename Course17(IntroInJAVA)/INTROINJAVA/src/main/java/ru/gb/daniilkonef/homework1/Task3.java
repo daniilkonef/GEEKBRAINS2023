@@ -9,21 +9,31 @@ public class Task3 {
     public static void simpleCalculator(){
         System.out.println("ВЫ ЗАПУСТИЛИ ОЧЕНЬ ПРОСТОЙ КАЛЬКУЛЯТОР");
         System.out.print("Введите число x1 = ");
-        int num1 = Integer.parseInt(scanner.nextLine());
+        double x1 = Double.parseDouble(scanner.nextLine());
 
         System.out.print("Введите число x2 = ");
-        int num2 = Integer.parseInt(scanner.nextLine());
+        double x2 = Double.parseDouble(scanner.nextLine());
 
         System.out.println();
         System.out.println("ТЕПЕРЬ НУЖНО ВЫБРАТЬ ОПЕРАЦИЮ:");
-        System.out.println("Введите 1 и нажмите Enter, если желаете выполнить суммирование введенных чисел;");
-        System.out.println("Введите 2 и нажмите Enter, если желаете выполнить вычитание x1 - x2 = ;");
+        System.out.println("Введите знак + и нажмите Enter, если желаете выполнить x1 + x2 = ;");
+        System.out.println("Введите знак - и нажмите Enter, если желаете выполнить x1 - x2 = ;");
+        System.out.println("Введите знак / и нажмите Enter, если желаете выполнить x1 / x2 = ;");
+        System.out.println("Введите знак * и нажмите Enter, если желаете выполнить x1 * x2 = ;");
 
-        switch (userChoice) {
-            case 1:
-        }
+        String userChoice = scanner.nextLine();
 
-        System.out.println(num1+num2);
+        if (userChoice.contains("+")) System.out.println("Результат x1 + x2 = " + Double.toString(x1+x2));
+        if (userChoice.contains("-")) System.out.println("Результат x1 - x2 = " + Double.toString(x1-x2));
+        if (userChoice.contains("/")) System.out.println("Результат x1 / x2 = " + Double.toString(x1/x2));
+        if (userChoice.contains("*")) System.out.println("Результат x1 * x2 = " + Double.toString(x1*x2));
+
+        System.out.println();
+
+
+
+
+
     }
 
     public static void run(){
