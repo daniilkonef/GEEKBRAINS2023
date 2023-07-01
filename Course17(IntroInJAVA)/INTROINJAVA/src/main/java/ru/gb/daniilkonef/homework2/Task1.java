@@ -74,7 +74,7 @@ public class Task1 {
         // Домашка сделана с помощью:
         // 1) https://javarush.com/groups/posts/3970-kofe-breyk-175-kak-mih-mozhem-prochitatjh-fayl-json-v-java-chto-takoe-java-development-kit-jdk
         // 2) Yandex GPT (особенная благодарность)
-        // 3) небольшого кол-ва моих мозгов еще
+        // 3) небольшого кол-ва моих закипевших мозгов еще
 
     }
 }
