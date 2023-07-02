@@ -1,9 +1,8 @@
 package ru.gb.daniilkonef;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
-public class Task1 {
+public class Task {
     public static void deleteEvenNumber(ArrayList<Integer> train){
         System.out.println("Список чисел до удаления четных чисел: " + train);
 
