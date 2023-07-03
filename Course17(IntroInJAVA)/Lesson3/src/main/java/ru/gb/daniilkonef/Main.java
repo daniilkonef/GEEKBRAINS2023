@@ -16,6 +16,11 @@ public class Main {
         System.out.println("max="+Collections.max(train));
 
         Task.getAvg(train);
+        double d = 1.34;
+        double d2 = (int)3.3 + (double)4.5;
+        String s1 = (String) "txt";
+        System.out.println((String)s1);
+
 
     }
 
