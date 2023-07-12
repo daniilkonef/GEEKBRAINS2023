@@ -21,7 +21,6 @@ public class Main {
         String s1 = (String) "txt";
         System.out.println((String)s1);
 
-
     }
 
 
