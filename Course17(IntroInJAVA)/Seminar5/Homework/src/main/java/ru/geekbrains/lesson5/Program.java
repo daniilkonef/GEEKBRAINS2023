@@ -14,36 +14,39 @@ public class Program {
          выводиться все телефоны.
          */
 
-        String[] phonebook = {
-                "700000001 Конев",
-                "700000002 Конев",
-                "700000003 Байраковский",
-                "700000004 Осетров",
-                "700000005 Иванов",
-                "700000006 Волчек",
-                "700000007 Иванов",
-                "700000008 Петрова",
+//        String[] phonebook = {
+//                "700000001 Конев",
+//                "700000002 Конев",
+//                "700000003 Байраковский",
+//                "700000004 Осетров",
+//                "700000005 Иванов",
+//                "700000006 Волчек",
+//                "700000007 Иванов",
+//                "700000008 Петрова",
+//        };
 
-        };
-        start(phonebook);
+//        start(phonebook);
+        Phonebook book1 = new Phonebook();
+        book1.printBook();
     }
+}
 
 
-    public static void start(String[] data) {
-        HashMap<Integer, String> hashMap1 = new HashMap<>();
-        // Способ 1
-        for (String person : data) {
-            String[] parts = person.split(" ");
-            hashMap1.put(Integer.parseInt(parts[0]), parts[1]);
-        }
+//    public static void start(String[] data) {
+//        HashMap<Integer, String> couple = new HashMap<>();
+//
+//        for (String person : data) {
+//            String[] parts = person.split(" ");
+//            couple.put(Integer.parseInt(parts[0]), parts[1]);
+//        }
+//
+//        for (Map.Entry<Integer, String> element : couple.entrySet()) {
+//            if (element.getValue().equals("Иванов"))
+//                System.out.println(element.getKey());
+//        }
 
-        for (Map.Entry<Integer, String> element : hashMap1.entrySet()) {
-            if (element.getValue().equals("Иванов"))
-                System.out.println(element.getKey());
-        }
 
-
-        // Способ 2
+// Способ 2
 //        HashMap<String, List<Integer>> hashMap2 = new HashMap<>();
 //        for (String person : data) {
 //            String[] parts = person.split(" ");
@@ -64,7 +67,7 @@ public class Program {
 //        if (lst != null) {
 //            System.out.println(lst);
 //        }
-
-    }
-
-}
+//
+//    }
+//
+//}
