@@ -1,8 +1,8 @@
 package org.example;
 
 public abstract class Product {
-    private String name;
-    private Double cost;
+    protected String name;
+    protected Double cost;
 
     public Product(String name, Double cost) {
         this.name = name;

@@ -1,19 +1,19 @@
 package org.example;
 
-public class HotDrink extends Product {
-    private Integer volume;
-    private Integer temperature;
+public abstract class HotDrink extends Product {
+    protected Double volume;
+    protected Double temperature;
 
-    public HotDrink(String name, Double cost, Integer volume) {
+    public HotDrink(String name, Double cost, Double volume) {
         super(name, cost);
         this.volume = volume;
     }
 
-    public Integer getVolume() {
+    public Double getVolume() {
         return volume;
     }
 
-    public void setVolume(Integer volume) {
+    public void setVolume(Double volume) {
         this.volume = volume;
     }
 
@@ -30,7 +30,7 @@ public class HotDrink extends Product {
         if (!(o instanceof HotDrink)) return false;
         //if (!(o instanceof BottleOfWater that)) return false;
 
-        HotDrink that = (HotDrink)o;
+        HotDrink that = (HotDrink) o;
         return getVolume() != null ? getVolume().equals(that.getVolume()) : that.getVolume() == null;
     }
 
