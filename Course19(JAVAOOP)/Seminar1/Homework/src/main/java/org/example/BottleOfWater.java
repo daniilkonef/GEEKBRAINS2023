@@ -1,18 +1,19 @@
 package org.example;
 
 public class BottleOfWater extends Product{
-    private Integer volume;
+    //private Integer volume;
+    private Double volume;
 
-    public BottleOfWater(String name, Double cost, Integer volume) {
+    public BottleOfWater(String name, Double cost, Double volume) {
         super(name, cost);
         this.volume = volume;
     }
 
-    public Integer getVolume() {
+    public Double getVolume() {
         return volume;
     }
 
-    public void setVolume(Integer volume) {
+    public void setVolume(Double volume) {
         this.volume = volume;
     }
 
@@ -20,7 +21,7 @@ public class BottleOfWater extends Product{
     public String toString() {
         return "BottleOfWater{" +
                 "volume=" + volume +
-                '}';
+                "} " + super.toString();
     }
 
     @Override
