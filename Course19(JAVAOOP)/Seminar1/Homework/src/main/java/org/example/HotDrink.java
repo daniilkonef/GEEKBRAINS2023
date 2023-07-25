@@ -2,7 +2,7 @@ package org.example;
 
 public abstract class HotDrink extends Product {
     protected Double volume;
-    protected Double temperature;
+
 
     public HotDrink(String name, Double cost, Double volume) {
         super(name, cost);

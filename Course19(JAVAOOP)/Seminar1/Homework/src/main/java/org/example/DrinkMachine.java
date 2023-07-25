@@ -9,6 +9,7 @@ public class DrinkMachine implements VendingMachine { // https://translate.googl
 
     public DrinkMachine(List<Product> products) {
         this.products = products;
+        System.out.println("Это то что есть в автомате: " + products);
     }
 
     public Product getProduct(String name) {
@@ -20,9 +21,18 @@ public class DrinkMachine implements VendingMachine { // https://translate.googl
         throw new IllegalStateException(String.format("Продукт c названием %s не найден.", name));
     }
 
-//    public Product getProduct(Double name, Double volume, Double temperature) {
-//
-//    }
+    public Product getProduct(String name, Double volume, Double temperature) {
+        for (Product product : products) {
+            if (product instanceof CupOfCoffee) {
+                //if ( (((CupOfCoffee) product).getName() == name) && (((CupOfCoffee) product).getTemperature() == temperature)) { // // есть проблема с этой перегрузкой, она не работает почемуто и я не понимаю почему
+                if ( (((CupOfCoffee) product).getName() == name)) {
+                    return product;
+                }
+            }
+
+        }
+        throw new IllegalStateException(String.format("Продукт c названием %s не найден.", name));
+    }
 
     public BottleOfWater getProduct(String name, int volume) {
         for (Product product : products) {
