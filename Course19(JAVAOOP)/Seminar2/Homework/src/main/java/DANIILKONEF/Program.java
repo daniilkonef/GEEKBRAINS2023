@@ -7,6 +7,10 @@ public class Program {
         Human human1 = new Human("Даниил");
         Human human2 = new Human("Влад");
 
-        
+        dixyMarket.acceptToMarket(human1);
+        dixyMarket.acceptToMarket(human2);
+
+        dixyMarket.update();
+
     }
 }

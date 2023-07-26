@@ -7,12 +7,12 @@ public class Human extends Actor {
     }
 
     @Override
-    public Void setMakeOrder() {
+    public Void setMakeOrder(Boolean status) {
         return null;
     }
 
     @Override
-    public Void setTakeOrder() {
+    public Void setTakeOrder(Boolean status) {
         return null;
     }
 
