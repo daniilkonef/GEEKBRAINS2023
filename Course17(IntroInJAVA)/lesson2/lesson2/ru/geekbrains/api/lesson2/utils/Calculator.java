@@ -9,7 +9,7 @@ public class Calculator{
 
     static Scanner scanner = new Scanner(System.in);
 
-    public static void run () /*throws IOException*/{
+    public static void run () {
 
         System.out.println("Введите имя");
         String str = scanner.nextLine();
