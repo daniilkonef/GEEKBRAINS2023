@@ -17,7 +17,10 @@ public class Program {
             System.out.print("Введите ваше дробное число: ");
             String line = input.nextLine(); //System.out.println(query);
 
-            if (line.isEmpty()) System.out.println("Введена пустая строка");
+            if (line.isEmpty()) {
+
+                throw new StringEmptyException();
+            }
 
             if (line.equalsIgnoreCase(new String("exit"))) break;
             try {
