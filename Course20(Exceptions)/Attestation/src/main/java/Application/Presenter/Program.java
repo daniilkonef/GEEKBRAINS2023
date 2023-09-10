@@ -2,6 +2,7 @@ package Application.Presenter;
 
 import Application.Controller.MrFileManager;
 import Application.Controller.MrInspector;
+import Application.DataModel.Person;
 import Application.Exceptions.IllegalAmountOfPersonsFeatures;
 import Application.Exceptions.IllegalTypeOfPersonsGender;
 
@@ -16,18 +17,20 @@ public class Program {
         {
             Scanner input = new Scanner(System.in);
             System.out.print("Введите ваши данные: ");
-            String txtLine = input.nextLine();
-            ArrayList<String> personsFeaturesList = new ArrayList<>(Arrays.asList(txtLine.split(" ")));
+            String text = input.nextLine();
+            //ArrayList<String> personsFeaturesList = new ArrayList<>(Arrays.asList(text.split(" ")));
 
             try {
-                MrInspector.doCheckTheAmountOfInputDataIn( personsFeaturesList );
+                MrInspector.doCheckTheAmountOfInputDataIn( text );
             }
             catch (IllegalAmountOfPersonsFeatures e) {}
 
             try {
-                MrInspector.doCheckTheGenderTypeIn(personsFeaturesList);
+                MrInspector.doCheckTheGenderTypeIn(text);
             }
             catch (IllegalTypeOfPersonsGender e) {}
+
+            Person person = new Person(text);
 
             Integer indexOfFirstName = 0; // имя
             Integer indexOfSecondName = 1; // фамилия
@@ -35,11 +38,11 @@ public class Program {
             Integer indexOfBirthDate = 3;
             Integer indexOfGenderType = 4;
 
-            String firstName = personsFeaturesList.get(indexOfFirstName);
-            String secondName = personsFeaturesList.get(indexOfSecondName);
+            String firstName = person.getFirstName();
+            String secondName = person.getSecondName();
 
 
-            MrFileManager.doCreateFileTxt(secondName,personsFeaturesList.toString());
+            MrFileManager.doCreateFileTxt(secondName,person.toString());
             Console.printLine("");
 
 
