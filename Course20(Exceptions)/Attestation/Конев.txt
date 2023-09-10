@@ -1,1 +1,1 @@
-Person{firstName='Даниил', secondName='Конев', lastName='Никол', birthDate='1984', genderType='m'}
+Person{firstName='Даниил', secondName='Конев', lastName='Отч', birthDate='1984', genderType='m'}

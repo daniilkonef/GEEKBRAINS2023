@@ -50,12 +50,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "firstName='" + firstName + '\'' +
-                ", secondName='" + secondName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", birthDate='" + birthDate + '\'' +
-                ", genderType='" + genderType + '\'' +
-                '}';
+        String space = " ";
+        return firstName +space+ secondName +space+ lastName +space+ birthDate +space+ genderType;
     }
 }

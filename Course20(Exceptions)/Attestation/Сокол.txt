@@ -1,1 +1,1 @@
-Влад Сокол 1984
+Person{firstName='Влад', secondName='Сокол', lastName='Отч', birthDate='1984', genderType='m'}

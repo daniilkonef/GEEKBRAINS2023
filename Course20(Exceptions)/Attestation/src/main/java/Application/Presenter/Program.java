@@ -15,35 +15,26 @@ public class Program {
 
         while (true)
         {
-            Scanner input = new Scanner(System.in);
+            Scanner inputUserData = new Scanner(System.in);
             System.out.print("Введите ваши данные: ");
-            String text = input.nextLine();
-            //ArrayList<String> personsFeaturesList = new ArrayList<>(Arrays.asList(text.split(" ")));
+            String properties = inputUserData.nextLine();
 
             try {
-                MrInspector.doCheckTheAmountOfInputDataIn( text );
+                MrInspector.doCheckTheAmountOfInputDataIn( properties );
             }
             catch (IllegalAmountOfPersonsFeatures e) {}
 
             try {
-                MrInspector.doCheckTheGenderTypeIn(text);
+                MrInspector.doCheckTheGenderTypeIn(properties);
             }
             catch (IllegalTypeOfPersonsGender e) {}
 
-            Person person = new Person(text);
+            Person person = new Person(properties);
+            MrFileManager.doCreateFileTxt(person.getSecondName(),person.toString());
+            person = null;
 
-            Integer indexOfFirstName = 0; // имя
-            Integer indexOfSecondName = 1; // фамилия
-            Integer indexOfLastName = 2; // отчество
-            Integer indexOfBirthDate = 3;
-            Integer indexOfGenderType = 4;
-
-            String firstName = person.getFirstName();
-            String secondName = person.getSecondName();
-
-
-            MrFileManager.doCreateFileTxt(secondName,person.toString());
             Console.printLine("");
+
 
 
 
