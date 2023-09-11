@@ -25,6 +25,7 @@ public class MrFileManager {
             System.out.println("Текстовый файл '" + fileName + "' успешно создан.");
         } catch (IOException e) {
             System.err.println("Произошла ошибка при создании файла: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -46,7 +47,8 @@ public class MrFileManager {
 
             System.out.println("В текстовый файл '" + fileName + "' успешно добавлена еще одна строка с однофамильцем.");
         } catch (IOException e) {
-            System.err.println("Произошла ошибка при создании файла: " + e.getMessage());
+            System.err.println("Произошла ошибка при дозаписи файла: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }

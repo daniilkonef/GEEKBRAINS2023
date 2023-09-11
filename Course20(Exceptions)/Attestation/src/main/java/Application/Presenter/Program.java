@@ -7,6 +7,7 @@ import Application.Exceptions.IllegalAmountOfPersonsFeatures;
 import Application.Exceptions.IllegalTypeOfPersonsGender;
 
 import java.io.File;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Program {
@@ -29,16 +30,16 @@ public class Program {
                 //
             }
 
-            Person person = new Person(properties);
-            if((new File("Денис.txt").exists())) {
-                MrFileManager.doAppendToFileTxt(person.getSecondName(), person.toString());
+            Person currentPerson = new Person(properties);
+            if((new File(currentPerson.getSecondName()+".txt").exists())) {
+                MrFileManager.doAppendToFileTxt(currentPerson.getSecondName(), currentPerson.toString());
             }
             else {
-                MrFileManager.doCreateFileTxt(person.getSecondName(), person.toString());
+                MrFileManager.doCreateFileTxt(currentPerson.getSecondName(), currentPerson.toString());
             }
             Console.printLine("");
+            currentPerson = null;
 
-            person = null;
 
 
         }
