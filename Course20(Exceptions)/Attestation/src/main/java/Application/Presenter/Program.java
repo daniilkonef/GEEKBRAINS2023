@@ -6,6 +6,7 @@ import Application.DataModel.Person;
 import Application.Exceptions.IllegalAmountOfPersonsFeatures;
 import Application.Exceptions.IllegalTypeOfPersonsGender;
 
+import java.io.File;
 import java.util.Scanner;
 
 public class Program {
@@ -29,10 +30,15 @@ public class Program {
             }
 
             Person person = new Person(properties);
-            MrFileManager.doCreateFileTxt(person.getSecondName(), person.toString());
-            person = null;
-
+            if((new File("Денис.txt").exists())) {
+                MrFileManager.doAppendToFileTxt(person.getSecondName(), person.toString());
+            }
+            else {
+                MrFileManager.doCreateFileTxt(person.getSecondName(), person.toString());
+            }
             Console.printLine("");
+
+            person = null;
 
 
         }
