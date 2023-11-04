@@ -1,0 +1,1 @@
+testvm@testvm: $ sudo apt remove gnome
