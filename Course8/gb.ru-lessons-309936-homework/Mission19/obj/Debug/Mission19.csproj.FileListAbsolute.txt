@@ -1,0 +1,8 @@
+D:\Projects\GEEKBRAINS2023\Course№8\gb.ru-lessons-309936-homework\Mission19\bin\Debug\Mission19.exe.config
+D:\Projects\GEEKBRAINS2023\Course№8\gb.ru-lessons-309936-homework\Mission19\bin\Debug\Mission19.exe
+D:\Projects\GEEKBRAINS2023\Course№8\gb.ru-lessons-309936-homework\Mission19\bin\Debug\Mission19.pdb
+D:\Projects\GEEKBRAINS2023\Course№8\gb.ru-lessons-309936-homework\Mission19\obj\Debug\Mission19.csproj.AssemblyReference.cache
+D:\Projects\GEEKBRAINS2023\Course№8\gb.ru-lessons-309936-homework\Mission19\obj\Debug\Mission19.csproj.SuggestedBindingRedirects.cache
+D:\Projects\GEEKBRAINS2023\Course№8\gb.ru-lessons-309936-homework\Mission19\obj\Debug\Mission19.csproj.CoreCompileInputs.cache
+D:\Projects\GEEKBRAINS2023\Course№8\gb.ru-lessons-309936-homework\Mission19\obj\Debug\Mission19.exe
+D:\Projects\GEEKBRAINS2023\Course№8\gb.ru-lessons-309936-homework\Mission19\obj\Debug\Mission19.pdb

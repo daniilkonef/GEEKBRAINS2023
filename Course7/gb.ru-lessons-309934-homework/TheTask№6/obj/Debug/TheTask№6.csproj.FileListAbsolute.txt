@@ -1,0 +1,8 @@
+D:\Projects\GEEKBRAINS2023\07 - gb.ru-lessons-309934-homework\TheTask№6\bin\Debug\TheTask№6.exe.config
+D:\Projects\GEEKBRAINS2023\07 - gb.ru-lessons-309934-homework\TheTask№6\bin\Debug\TheTask№6.exe
+D:\Projects\GEEKBRAINS2023\07 - gb.ru-lessons-309934-homework\TheTask№6\bin\Debug\TheTask№6.pdb
+D:\Projects\GEEKBRAINS2023\07 - gb.ru-lessons-309934-homework\TheTask№6\obj\Debug\TheTask№6.csproj.AssemblyReference.cache
+D:\Projects\GEEKBRAINS2023\07 - gb.ru-lessons-309934-homework\TheTask№6\obj\Debug\TheTask№6.csproj.SuggestedBindingRedirects.cache
+D:\Projects\GEEKBRAINS2023\07 - gb.ru-lessons-309934-homework\TheTask№6\obj\Debug\TheTask№6.csproj.CoreCompileInputs.cache
+D:\Projects\GEEKBRAINS2023\07 - gb.ru-lessons-309934-homework\TheTask№6\obj\Debug\TheTask№6.exe
+D:\Projects\GEEKBRAINS2023\07 - gb.ru-lessons-309934-homework\TheTask№6\obj\Debug\TheTask№6.pdb
