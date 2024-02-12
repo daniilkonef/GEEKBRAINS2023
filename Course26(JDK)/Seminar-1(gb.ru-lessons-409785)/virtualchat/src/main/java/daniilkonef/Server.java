@@ -13,10 +13,28 @@ public class Server extends JFrame{
 
 
     Server(){
+        isServerWorking = false;
+        buttonStop.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                isServerWorking = false;
+                System.out.println("Server is stopped " + isServerWorking + "\n");
+            }
+        });
+
+        buttonStart.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                isServerWorking = true;
+                System.out.println("Server is started " + isServerWorking + "\n");
+            }
+        });
+
+
         setSize(WIDTH,HEIGHT);
         setResizable(false);
         setLocationRelativeTo(null);
-        setTitle("Server Window");
+        setTitle("Server");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
         setLayout(new GridLayout(1,2));
