@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 public class Server extends JFrame{
     private static final int WIDTH =555;
-    private static final int HEIGHT =555;
+    private static final int HEIGHT =55*2;
     private final JButton buttonStart = new JButton("Start");
     private final JButton buttonStop = new JButton("Stop");
     private final JTextArea logArea = new JTextArea();
@@ -18,7 +18,7 @@ public class Server extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 isServerWorking = false;
-                System.out.println("Server is stopped " + isServerWorking + "\n");
+                System.out.println("Server is stopped ");
             }
         });
 
@@ -26,7 +26,7 @@ public class Server extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 isServerWorking = true;
-                System.out.println("Server is started " + isServerWorking + "\n");
+                System.out.println("Server is started ");
             }
         });
 
